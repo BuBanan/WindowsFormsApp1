@@ -29,12 +29,122 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.txtMinues = new System.Windows.Forms.TextBox();
+            this.txtSeconds = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tmrSecundomer = new System.Windows.Forms.Timer(this.components);
+            this.zero = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // txtMinues
+            // 
+            this.txtMinues.Location = new System.Drawing.Point(12, 67);
+            this.txtMinues.Name = "txtMinues";
+            this.txtMinues.Size = new System.Drawing.Size(100, 20);
+            this.txtMinues.TabIndex = 0;
+            // 
+            // txtSeconds
+            // 
+            this.txtSeconds.Location = new System.Drawing.Point(205, 67);
+            this.txtSeconds.Name = "txtSeconds";
+            this.txtSeconds.Size = new System.Drawing.Size(100, 20);
+            this.txtSeconds.TabIndex = 1;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(290, 143);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 2;
+            this.btnStart.Text = "Старт";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "сек.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(127, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "мин.";
+            // 
+            // tmrSecundomer
+            // 
+            this.tmrSecundomer.Interval = 1000;
+            this.tmrSecundomer.Tick += new System.EventHandler(this.tmrSecundomer_Tick);
+            // 
+            // zero
+            // 
+            this.zero.Location = new System.Drawing.Point(205, 143);
+            this.zero.Name = "zero";
+            this.zero.Size = new System.Drawing.Size(75, 23);
+            this.zero.TabIndex = 5;
+            this.zero.Text = "Сброс";
+            this.zero.UseVisualStyleBackColor = true;
+            this.zero.Click += new System.EventHandler(this.zero_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(205, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Текущее время";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(377, 178);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.zero);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.txtSeconds);
+            this.Controls.Add(this.txtMinues);
+            this.Name = "Form1";
+            this.Text = "Секундомер";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtMinues;
+        private System.Windows.Forms.TextBox txtSeconds;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer tmrSecundomer;
+        private System.Windows.Forms.Button zero;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
