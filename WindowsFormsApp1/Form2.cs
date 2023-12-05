@@ -19,16 +19,16 @@ namespace WindowsFormsApp1
 
         private void buttonCalc_Click(object sender, EventArgs e)
         {
-            double x1 = double.Parse(txt_x.Text);
-            double y1 = double.Parse(txt_y.Text);
             // считываем с формы требуемые значени
+            double y1 = double.Parse(txt_y.Text);
+            double z1 = double.Parse(txt_z.Text);
             double min = double.Parse(Xmin.Text);
             double max = double.Parse(Xmax.Text);
             double St = double.Parse(Step.Text);
             // количество точек графика
             int count = (int)Math.Ceiling((max - min) / St)
                 + 1;
-            // массив значений X - общий для обоих графиков
+            // массив значений x y
             double[] X = new double[count];
             double[] y = new double[count];
             // расчитываем точки для графиков функции
@@ -36,8 +36,8 @@ namespace WindowsFormsApp1
             {
                 // вычисляем значение
                 X[i] = min + St * i;
-                // вычисляем значение функций в точке X
-                y[i] = Math.Pow(2,-x1) * Math.Sqrt(x1+);
+                // вычисляем значение функций в точке y
+                y[i] = Math.Pow(2, -X[i]) * Math.Sqrt(X[i] + 4 * Math.Sqrt(Math.Abs(y1))) * Math.Pow(Math.Exp((X[i] - 1) / Math.Sin(z1)), 1.0 / 3.0);
             }
             // настраиваем оси графика
             chart1.ChartAreas[0].AxisX.Minimum = min;

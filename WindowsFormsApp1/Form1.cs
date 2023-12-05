@@ -19,10 +19,10 @@ namespace WindowsFormsApp1
 
         private void buttonCalc_Click(object sender, EventArgs e)
         {
+            // считываем с формы требуемые значени
             double a = double.Parse(txt_a.Text);
             double b = double.Parse(txt_b.Text);
             double c = double.Parse(txt_c.Text);
-            // считываем с формы требуемые значени
             double min = double.Parse(Xmin.Text);
             double max = double.Parse(Xmax.Text);
             double St = double.Parse(Step.Text);
