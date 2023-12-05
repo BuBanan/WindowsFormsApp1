@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
                 // вычисляем значение
                 X[i] = min + St * i;
                 // вычисляем значение функций в точке X
-                y[i] = a * X[i] * X[i] + b * X[i] + c;
+                y[i] = a * Math.Pow(X[i], 2) + b * X[i] + c;
             }
             // настраиваем оси графика
             chart1.ChartAreas[0].AxisX.Minimum = min;
